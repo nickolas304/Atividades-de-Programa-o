@@ -1,0 +1,31 @@
+programa
+{
+    inclua biblioteca Util --> u
+    inclua biblioteca Calendario --> c
+
+    funcao inicio()
+    {
+        inteiro numero
+        inteiro i
+        inteiro j
+
+        numero = u.sorteia(1, 100)
+
+        escreva("Sorteando um numero...\n")
+
+        para(i = 0; i < 200000000; i++)
+        {
+            j = i
+        }
+
+        escreva("Numero sorteado: ", numero, "\n")
+
+        escreva("Data e hora da geracao: ")
+        escreva(c.dia_mes_atual(), "/")
+        escreva(c.mes_atual(), "/")
+        escreva(c.ano_atual(), " ")
+        escreva(c.hora_atual(), ":")
+        escreva(c.minuto_atual(), ":")
+        escreva(c.segundo_atual())
+    }
+}
