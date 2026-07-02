@@ -13,10 +13,7 @@ programa
 
         escreva("Sorteando um numero...\n")
 
-        para(i = 0; i < 200000000; i++)
-        {
-            j = i
-        }
+      u.aguarde(5000)   
 
         escreva("Numero sorteado: ", numero, "\n")
 
