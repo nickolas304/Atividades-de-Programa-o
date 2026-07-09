@@ -1,0 +1,52 @@
+programa
+{
+    inclua biblioteca Util --> util
+    inclua biblioteca Matematica --> mat
+    inclua biblioteca Texto --> txt
+    inclua biblioteca Calendario --> cal
+
+    funcao inicio()
+    {
+        cadeia nome
+        inteiro idade
+        real altura
+        real peso
+        real imc
+        inteiro numero
+
+        escreva("===== CADASTRO DO USUÁRIO =====\n")
+
+        escreva("Digite seu nome: ")
+        leia(nome)
+
+        escreva("Digite sua idade: ")
+        leia(idade)
+
+        escreva("Digite sua altura (em metros): ")
+        leia(altura)
+
+        escreva("Digite seu peso (kg): ")
+        leia(peso)
+
+        escreva("\nNome em MAIÚSCULO: ", txt.caixa_alta(nome), "\n")
+        escreva("Quantidade de caracteres do nome: ", txt.numero_caracteres(nome), "\n")
+
+        numero = util.sorteia(1,100)
+        escreva("\nNúmero sorteado: ", numero, "\n")
+
+        escreva("Aguarde 2 segundos...\n")
+        util.aguarde(2000)
+
+        imc = peso / mat.potencia(altura,2)
+
+        escreva("\nSeu IMC é: ", mat.arredondar(imc,2), "\n")
+
+        escreva("\nData atual: ")
+        escreva(cal.dia_mes_atual(), "/", cal.mes_atual(), "/", cal.ano_atual(), "\n")
+
+        escreva("Horário atual: ")
+        escreva(cal.hora_atual(), ":")
+        escreva(cal.minuto_atual(), ":")
+        escreva(cal.segundo_atual(), "\n")
+    }
+}
