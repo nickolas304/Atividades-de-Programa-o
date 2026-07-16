@@ -1,0 +1,104 @@
+programa
+{
+    inclua biblioteca Matematica --> mat
+    inclua biblioteca Texto --> txt
+    inclua biblioteca Tipos --> tp
+
+    funcao inicio()
+    {
+        inteiro opcao = -1
+        inteiro quantidade
+        real total = 0
+
+        enquanto(opcao != 0)
+        {
+            escreva("MCDONALDS\n")
+            escreva("1 - BIG MAC R$ 28.00\n")
+            escreva("2 - MCCHICKEN R$ 22.00\n")
+            escreva("3 - BATATA MEDIA R$ 12.00\n")
+            escreva("4 - REFRIGERANTE R$ 10.00\n")
+            escreva("5 - MOSTRAR TOTAL\n")
+            escreva("0 - FINALIZAR COMPRA\n")
+            escreva("ESCOLHA UMA OPCAO: ")
+            leia(opcao)
+
+            escolha(opcao)
+            {
+                caso 1:
+                {
+                    escreva("QUANTIDADE: ")
+                    leia(quantidade)
+
+                    total = total + (28 * quantidade)
+
+                    escreva("BIG MAC ADICIONADO\n")
+                    pare
+                }
+
+                caso 2:
+                {
+                    escreva("QUANTIDADE: ")
+                    leia(quantidade)
+
+                    total = total + (22 * quantidade)
+
+                    escreva("MCCHICKEN ADICIONADO\n")
+                    pare
+                }
+
+                caso 3:
+                {
+                    escreva("QUANTIDADE: ")
+                    leia(quantidade)
+
+                    total = total + (12 * quantidade)
+
+                    escreva("BATATA ADICIONADA\n")
+                    pare
+                }
+
+                caso 4:
+                {
+                    escreva("QUANTIDADE: ")
+                    leia(quantidade)
+
+                    total = total + (10 * quantidade)
+
+                    escreva("REFRIGERANTE ADICIONADO\n")
+                    pare
+                }
+
+                caso 5:
+                {
+                    escreva("TOTAL DA COMPRA\n")
+
+                    escreva("VALOR: R$ ")
+                    escreva(mat.arredondar(total,2))
+                    escreva("\n")
+
+                    cadeia valor
+                    valor = tp.real_para_cadeia(total)
+
+                    escreva(txt.caixa_alta("COMPRA REGISTRADA: "))
+                    escreva(valor)
+                    escreva("\n")
+
+                    pare
+                }
+
+                caso 0:
+                {
+                    escreva("OBRIGADO PELA PREFERENCIA\n")
+                    escreva("VALOR FINAL: R$ ")
+                    escreva(mat.arredondar(total,2))
+                    pare
+                }
+
+                caso contrario:
+                {
+                    escreva("OPCAO INVALIDA\n")
+                }
+            }
+        }
+    }
+}
