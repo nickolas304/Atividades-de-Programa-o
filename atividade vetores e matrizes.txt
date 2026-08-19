@@ -1,0 +1,90 @@
+programa
+{
+	funcao inicio()
+	{
+		// exercicio 1
+		inteiro num[5]
+		inteiro soma = 0
+		
+		para(inteiro i = 0; i < 5; i++)
+		{
+			escreva("digite um numero: ")
+			leia(num[i])
+			soma = soma + num[i]
+		}
+		escreva("soma de tudo: ", soma, "\n\n")
+
+		// exercicio 2
+		inteiro vet[10] = {12, 45, 3, 88, 21, 9, 64, 33, 70, 15}
+		inteiro maior = vet[0]
+		inteiro menor = vet[0]
+
+		para(inteiro i = 1; i < 10; i++)
+		{
+			se(vet[i] > maior)
+			{
+				maior = vet[i]
+			}
+			se(vet[i] < menor)
+			{
+				menor = vet[i]
+			}
+		}
+		escreva("maior numero: ", maior, "\n")
+		escreva("menor numero: ", menor, "\n\n")
+
+		// exercicio 3
+		inteiro mat[3][3]
+		inteiro total = 0
+
+		para(inteiro i = 0; i < 3; i++)
+		{
+			para(inteiro j = 0; j < 3; j++)
+			{
+				escreva("digite o valor: ")
+				leia(mat[i][j])
+				total = total + mat[i][j]
+			}
+		}
+		escreva("soma da matriz: ", total, "\n\n")
+
+		// exercicio 4
+		inteiro valores[4][4] = {
+			{10, 2, 3, 4},
+			{5, 20, 7, 8},
+			{9, 1, 30, 3},
+			{4, 5, 6, 40}
+		}
+
+		escreva("diagonal principal: ")
+		para(inteiro i = 0; i < 4; i++)
+		{
+			escreva(valores[i][i], " ")
+		}
+		escreva("\n\n")
+
+		// exercicio 5
+		real notas[3][4]
+		real medias[3]
+		real somaNotas
+
+		para(inteiro a = 0; a < 3; a++)
+		{
+			somaNotas = 0.0
+			escreva("aluno ", a + 1, ":\n")
+			para(inteiro b = 0; b < 4; b++)
+			{
+				escreva("nota: ")
+				leia(notas[a][b])
+				somaNotas = somaNotas + notas[a][b]
+			}
+			medias[a] = somaNotas / 4.0
+		}
+
+		escreva("\nmedias:\n")
+		para(inteiro a = 0; a < 3; a++)
+		{
+			escreva("aluno ", a + 1, ": ", medias[a], "\n")
+		}
+	}
+}
